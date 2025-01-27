@@ -14,3 +14,4 @@ MAILER_SECRET_KEY=
 PROD=false
 ```
 3.- Ejecutar comando ```pnpm install```
+4.- Ejecutar comando ```pnpm run dev```
