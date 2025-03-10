@@ -43,27 +43,27 @@ export class Server {
     // const logs = await fileSystemLogRepository.getLogs(LogSeverityLevel.high);
     // console.log(logs)
 
-    CronService.createJob(
-      '*/5 * * * * *',
-      () => {
-        const date = new Date();
-        const url = `http://localhost:3000`;
-        // const url = `https://www.google.com`;
-        // new CheckService(
-        //   fileSystemLogRepository,
-        //   () => console.log(`${url} is working!`),
-        //   console.error,
-        // ).execute(url);
-        new CheckServiceMultiple(
-          [
-            fsLogRepository,
-            mongoLogRepository,
-            postgreLogRepository,
-          ],
-          () => console.log(`${url} is working!`),
-          console.error,
-        ).execute(url);
-      }
-    );
+    // CronService.createJob(
+    //   '*/5 * * * * *',
+    //   () => {
+    //     const date = new Date();
+    //     const url = `http://localhost:3000`;
+    //     // const url = `https://www.google.com`;
+    //     // new CheckService(
+    //     //   fileSystemLogRepository,
+    //     //   () => console.log(`${url} is working!`),
+    //     //   console.error,
+    //     // ).execute(url);
+    //     new CheckServiceMultiple(
+    //       [
+    //         fsLogRepository,
+    //         mongoLogRepository,
+    //         postgreLogRepository,
+    //       ],
+    //       () => console.log(`${url} is working!`),
+    //       console.error,
+    //     ).execute(url);
+    //   }
+    // );
   }
 }

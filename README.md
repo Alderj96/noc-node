@@ -7,4 +7,5 @@ Node version: v20.18.1
 2.- Config env vars
 3.- Execute command ```pnpm install```
 4.- Execute docker compose ```docker componse up -d```
-5.- Execute command ```pnpm run dev```
+5.- Execute command ```pnpm exec prisma migrate dev```
+6.- Execute command ```pnpm run dev```
