@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 import { envs } from "../../../config/plugins/envs.plugin"
 import { MongoDatabase } from "../init"
-import { LogModel } from "./Log.model"
+import { LogModel } from "./log.model"
 
 describe('log.model.test.ts', () => {
 
@@ -31,6 +31,8 @@ describe('log.model.test.ts', () => {
         id: expect.any(String),
       })
     )
+
+    await LogModel.findByIdAndDelete(log._id)
   })
 
   test('should return the schema object', () => {
